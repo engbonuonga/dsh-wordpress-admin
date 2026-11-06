@@ -1,0 +1,74 @@
+{
+  "name": "dsh-wordpress-admin",
+  "version": "0.1.1",
+  "description": "Full WordPress and WooCommerce administration from DeepSeek Harness: create and edit posts, pages, products, media, themes, plugins, templates and menus over the WordPress REST API.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Brian Onuonga",
+    "url": "https://github.com/engbonuonga"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engbonuonga/dsh-wordpress-admin.git"
+  },
+  "homepage": "https://github.com/engbonuonga/dsh-wordpress-admin#readme",
+  "bugs": {
+    "url": "https://github.com/engbonuonga/dsh-wordpress-admin/issues"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "wordpress",
+    "woocommerce",
+    "wordpress-rest-api",
+    "vibe-coding",
+    "cms",
+    "blog",
+    "mcp"
+  ],
+  "main": "src/index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./src/index.js",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/",
+    "locale/",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "SECURITY.md",
+    "docs/",
+    "wordpress-plugin/"
+  ],
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": ">=0.1.0-rc.6"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "pack:check": "npm pack --dry-run"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

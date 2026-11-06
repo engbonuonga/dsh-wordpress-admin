@@ -1,0 +1,17 @@
+# dsh-wordpress-admin bundle layer.
+#
+# The row id stays stable so profile-level patches can target it and keep
+# working across upgrades. Configuration belongs in the profile patch:
+#
+#   - id: dsh-wordpress-admin
+#     config:
+#       siteUrl: https://example.com
+#       username: your-wp-user
+#       appPasswordEnv: DSH_WP_APP_PASSWORD
+#       allowDestructive: false
+#
+# Prefer environment variables for secrets (see docs/SETUP.md). Values written
+# here land in the profile patch in plain text.
+- insert:
+    - id: dsh-wordpress-admin
+      name: 'dsh-wordpress-admin'
